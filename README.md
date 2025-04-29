@@ -1,17 +1,53 @@
 
 # EX-01-Datatypes-Operators
 ## AIM:
-Write a C program to read 3 characters one by one and print the characters in a reverse order.
+Write a C program to read the student percentage and print the grade he/she got?
+
+marks>=70 print A+ GRADE
+
+60>= marks <70 print A GRADE
+
+50>= marks <60 print B GRADE
+
+40>= marks <50 print C GRADE
+
+marks<40 print F GRADE
 
 ## ALGORITHM:
-1.	Declare three character variables to store the input characters.
-2.	Use the scanf function to read the characters one by one from the user.
-3.	Print the characters in reverse order using the printf function.
-4.	End the program.
+1.Start
+
+2.Declare a variable to store the student's percentage.
+
+3.Prompt the user to input the percentage.
+
+4.Read the input value.
+
+5.Use if...else if...else statements to determine the grade:
+
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main()  
+{
+    int a;
+    scanf("%d",&a);
+    if (a>=70)
+    printf("A+ GRADE");
+    else if ((a>=60)&&(a<70))
+    printf("A GRADE");
+    else if ((a>=50)&&(a<60))
+    printf("B GRADE");
+    else if ((a>=40)&&(a<50))
+    printf("C GRADE");
+    else
+    printf("F GRADE");
+    return 0;
+}
+```
 
 ## OUTPUT:
+![Screenshot 2025-04-29 152911](https://github.com/user-attachments/assets/5aac7e6e-ba81-4632-9afb-7f9a59363dec)
 
 
 
@@ -35,19 +71,55 @@ Thus the program to read 3 characters one by one and print the characters in a r
 
 # EX-02- Conditional-Statements
 ## AIM:
-Write a C program to read A values and check whether A is positive number or not.
+Write a C Program to check the eligibility for college admission if their condition and norms get satisfied using nested if statement. Should satisfy
+
+1. if age above 18 and marks above 60 then it displays "He/She is eligible for college admission"
+
+2. if age above 18 and marks below 60 then it displays "Obtained marks less than 60"
+
+3. if age is below 18 then it displays "Age less than 18"
 
 # ALGORITHM:
-1.	Declare a variable to store the input value A.
-2.	Use the scanf function to read the value of A from the user.
-3.	Check if the value of A is greater than zero.
-4.	If A is greater than zero, print a message indicating that it's a positive number. 
-5.	Otherwise, print a message indicating that it's not a positive number.
-6.End the program.
+1.Start
+
+2.Declare two variables: age and marks.
+
+3.Prompt the user to input age and marks.
+
+4.Read the inputs.
+
+5.Check if age is greater than 18:
+
+6.If true, check if marks > 60:
+
+7.If true, print "He/She is eligible for college admission"
+
+8.Else, print "Obtained marks less than 60"
+
+9.If age is less than or equal to 18:
+
+10.Print "Age less than 18"
+
+11.End
 
 # PROGRAM:
+```
+#include<stdio.h>
+int main(){
+    int a,b;
+    scanf("%d %d",&a,&b);
+    if ((a>=18)&&(b>60))
+       printf("He/She is eligible for college admission");
+    else if ((a>18)&&(b<60))
+       printf("Obtained marks less than 60");
+    else
+       printf("Age less than 18");
+}
+```
 
 # OUTPUT:
+![Screenshot 2025-04-29 153242](https://github.com/user-attachments/assets/35e0ecc0-cd2c-4cc7-be48-af9ecfcaf726)
+
 
 
 
@@ -68,20 +140,33 @@ Thus the program to read A values and check whether A is positive number or not 
 
 # EX-03- Operators-Expressions
 ## AIM:
-Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
+Write a C program to swap two numbers without using third variable.
 
 ## ALGORITHM:
-1.	Declare variables to store the two fraction numbers and the result.
-2.	Use the printf function to prompt the user to enter the first fraction number (numerator and denominator separately).
-3.	Use the scanf function to read the numerator and denominator of the first fraction.
-4.	Repeat steps 2 and 3 to get the second fraction from the user.
-5.	Calculate the decimal values of both fractions by dividing the numerators by the denominators.
-6.	Use the conditional (ternary) operator to compare the decimal values and store the minimum value in the result variable.
-7.	Print the minimum value.
+1.Start
+
+2.Read two numbers, a and b.
+
+3.Set a = a + b
+
+4.Set b = a - b, then a = a - b
+
+5.Print the swapped values of a and b
+
+
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main(){
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("Numbers before swapping: %d %d\n",a,b);
+    printf("Numbers after swapping: %d %d",b,a);
+}
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/732e1d3c-489d-4561-8f5e-02521df97a84)
 
 
 
@@ -100,19 +185,43 @@ Thus the program to find minimum between two fraction numbers using conditional 
 # EX-04- Using Conditional Statements
 
 ## AIM:
-Write a C program to check whether the input value is equal to 1 using simple if statement
+Write a C Program to simulate the bitwise operators(&, | ) using the switch statement
 
 ## ALGORITHM:
-1.	Declare a variable to store the input value.
-2.	Use the scanf function to read the input value from the user.
-3.	Use an if statement to check if the input value is equal to 1.
-4.	If the condition in the if statement is true, print a message indicating that the input value is equal to 1.
-5.	Otherwise, print a message indicating that it's not equal to 1.
-6.	End the program.
+1.Start
+
+2.Read two integer numbers and a choice (1 for &, 2 for |)
+
+3.Use a switch statement to check the choice
+
+4.If choice is 1, compute a & b; if 2, compute a | b
+
+5.Display the result
+
+
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int value;
+
+    printf("Enter an integer: ");
+    scanf("%d", &value);
+
+    if (value == 1) {
+        printf("The value is equal to 1.\n");
+    }
+
+    return 0;
+}
+
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/5d4a137d-ff11-4aa4-a0df-0e7c5b316df3)
+
 
 
 
@@ -131,24 +240,34 @@ Thus the program to check whether the input value is equal to 1 using simple if 
 
 # EX-05- Calculating Total, Percentage, And Division Using Conditional Statements 
 ## AIM:
-To write a C program that reads marks of three subjects, calculates the total and percentage, and then determines the division (First, Second, Pass, or Fail) based on the percentage and minimum marks criteria.
+write a  program to convert temperature from degree celsius to Fahrenheit
 ## ALGORITHM:
-1.	Start
-2.	Declare integer variables m1, m2, m3 for marks, and float variables tot, per.
-3.	Input the marks for three subjects.
-4.	Calculate total marks: tot = m1 + m2 + m3
-5.	Calculate percentage: per = tot / 3
-6.	Display total and percentage.
-7.	Check if all marks are greater than or equal to 40:
-8.	If yes:
-a.	If percentage >= 60: Print “Division = First”
-b.	Else if percentage >= 48: Print “Division = Second”
-c.	Else if percentage >= 36: Print “Division = Pass”
-9.	Else: Print “Division = Fail”
-10.	End
+1.Start
+
+2.Read the temperature in Celsius (C).
+
+3.Apply the formula: Fahrenheit = (Celsius * 9/5) + 32
+
+4.Print the result in Fahrenheit.
+
+5.End
+
+
 ## PROGRAM:
+```
+#include <stdio.h>
+int main(){
+    float a,b;
+    scanf("%f",&a);
+    b=(1.8*a)+32;
+    printf("%.2f Celsius=%.2f Fahrenheit",a,b);
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/4c7783e4-84a0-4bc7-9861-221581ee2ae5)
+
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
